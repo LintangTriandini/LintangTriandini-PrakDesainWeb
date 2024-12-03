@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi Buku Favorit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <h1 class="text-4xl font-bold text-center text-pink-600 my-6">Aplikasi Buku Favorit</h1>
+
+    <!-- Input Nama Pengguna -->
+    <div id="session-container" class="text-center mb-8">
+        <input 
+            type="text" 
+            id="namaPengguna" 
+            placeholder="Masukkan Nama Anda" 
+            class="px-4 py-2 w-64 border rounded-md shadow-sm focus:outline-none focus:ring focus:ring-pink-300"
+        />
+        <button 
+            id="btnSimpanNama" 
+            class="ml-2 px-4 py-2 bg-pink-500 text-white font-medium rounded-md shadow-sm hover:bg-pink-600">
+            Simpan Nama
+        </button>
+        <h3 id="salamPengguna" class="mt-4 text-xl text-pink-500 font-semibold"></h3>
+    </div>
+
+    <!-- Form Tambah Buku -->
+    <form 
+        id="form-tambah-buku" 
+        class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md space-y-4">
+        <input 
+            type="text" 
+            id="judul" 
+            placeholder="Judul Buku" 
+            class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-pink-300"
+            required 
+        />
+        <input 
+            type="text" 
+            id="penulis" 
+            placeholder="Penulis" 
+            class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-pink-300"
+            required 
+        />
+        <input 
+            type="number" 
+            id="tahun" 
+            placeholder="Tahun Terbit" 
+            class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-pink-300"
+            required 
+        />
+        <button 
+            type="submit" 
+            class="w-full px-4 py-2 bg-pink-500 text-white font-medium rounded-md shadow-sm hover:bg-pink-600">
+            Tambah Buku
+        </button>
+    </form>
+
+    <!-- Daftar Buku -->
+    <h2 class="text-2xl font-semibold text-center text-pink-600 my-6">Daftar Buku</h2>
+    <div id="daftar-buku" class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-md space-y-4"></div>
+
+    <!-- Buku Favorit -->
+    <h2 class="text-2xl font-semibold text-center text-pink-600 my-6">Buku Favorit</h2>
+    <div id="buku-favorit" class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-md space-y-4"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
